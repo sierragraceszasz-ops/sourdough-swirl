@@ -444,160 +444,212 @@ footer{
 <body>
 
 <nav>
-  <div style="color:var(--cream);font-size:1.2rem;">
-    The <span style="color:#F5C98A;">Sourdough Swirl</span>
-  </div>
+<div style="color:var(--cream);font-size:1.2rem;">
+The <span style="color:#F5C98A;">Sourdough Swirl</span>
+</div>
 
-  <button class="cart-btn" onclick="toggleCart()">
-    Cart
-    <span class="cart-count" id="cartCount">0</span>
-  </button>
+<button class="cart-btn" onclick="toggleCart()">
+Cart
+<span class="cart-count" id="cartCount">0</span>
+</button>
 </nav>
 
-<div class="hero">
-  <h1>The Sourdough Swirl</h1>
-  <p>Freshly baked, warmly spiced, lovingly made.</p>
 
-  <button
-    class="hero-btn"
-    onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
-    Order Now
-  </button>
+<div class="hero">
+
+<h1>The Sourdough Swirl</h1>
+
+<p>Freshly baked, warmly spiced, lovingly made.</p>
+
+<button
+class="hero-btn"
+onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+Order Now
+</button>
+
 </div>
+
 
 <div class="section" id="menu">
 
-  <h2 class="section-title">Our Rolls</h2>
+<h2 class="section-title">Our Rolls</h2>
 
-  <div class="grid" id="productGrid"></div>
+<div class="grid" id="productGrid"></div>
 
 </div>
+
 
 <div class="overlay" id="overlay" onclick="toggleCart()"></div>
 
+
 <div class="sidebar" id="sidebar">
 
-  <div class="sidebar-header">
-    <h2>Your Cart</h2>
+<div class="sidebar-header">
 
-    <button class="close-btn" onclick="toggleCart()">✕</button>
-  </div>
+<h2>Your Cart</h2>
 
-  <div class="cart-items" id="cartItems">
-    <p class="empty-cart">Your cart is empty.</p>
-  </div>
+<button class="close-btn" onclick="toggleCart()">✕</button>
 
-  <div class="cart-footer">
-
-    <div class="cart-total">
-      <span>Total</span>
-      <span id="cartTotal">$0.00</span>
-    </div>
-
-    <button class="checkout-btn" onclick="openCheckout()">
-      Proceed to Checkout
-    </button>
-
-  </div>
 </div>
+
+
+<div class="cart-items" id="cartItems">
+
+<p class="empty-cart">Your cart is empty.</p>
+
+</div>
+
+
+<div class="cart-footer">
+
+<div class="cart-total">
+
+<span>Total</span>
+
+<span id="cartTotal">$0.00</span>
+
+</div>
+
+
+<button class="checkout-btn" onclick="openCheckout()">
+Proceed to Checkout
+</button>
+
+</div>
+
+</div>
+
 
 <div class="modal-overlay" id="modalOverlay">
 
-  <div class="modal">
+<div class="modal">
 
-    <div id="checkoutForm">
 
-      <h2>Complete Your Order</h2>
+<div id="checkoutForm">
 
-      <div class="order-summary" id="orderSummary"></div>
+<h2>Complete Your Order</h2>
 
-      <div class="form-row">
 
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" id="fname" placeholder="Jane"/>
-        </div>
+<div class="order-summary" id="orderSummary"></div>
 
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" id="lname" placeholder="Smith"/>
-        </div>
 
-      </div>
+<div class="form-row">
 
-      <div class="form-group">
+<div class="form-group">
 
-        <label>Email or Phone</label>
+<label>First Name</label>
 
-        <input
-          type="email"
-          id="email"
-          placeholder="jane@email.com"
-          oninput="clearError()"
-          style="margin-bottom:.5rem"
-        />
-
-        <input
-          type="tel"
-          id="phone"
-          placeholder="(555) 000-0000"
-          oninput="clearError()"
-        />
-
-        <p
-          id="contactError"
-          style="color:var(--cinnamon);font-size:.8rem;margin-top:.3rem;display:none">
-          Please provide an email or phone number.
-        </p>
-
-      </div>
-
-      <div class="modal-btns">
-
-        <button class="cancel-btn" onclick="closeCheckout()">
-          Cancel
-        </button>
-
-        <button class="place-btn" onclick="placeOrder()">
-          Place Order
-        </button>
-
-      </div>
-
-    </div>
-
-    <div class="success-msg" id="successMsg">
-
-      <div class="check">🎉</div>
-
-      <h2>Order Placed!</h2>
-
-      <p>
-        Thank you! We'll be in touch shortly to confirm your order.
-      </p>
-
-      <br/>
-
-      <button
-        class="place-btn"
-        onclick="closeCheckout();resetCart();">
-        Back to Shop
-      </button>
-
-    </div>
-
-  </div>
+<input
+type="text"
+id="fname"
+placeholder="Jane"
+/>
 
 </div>
 
+
+<div class="form-group">
+
+<label>Last Name</label>
+
+<input
+type="text"
+id="lname"
+placeholder="Smith"
+/>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email or Phone</label>
+
+
+<input
+type="email"
+id="email"
+placeholder="jane@email.com"
+oninput="clearError()"
+style="margin-bottom:.5rem"
+/>
+
+
+<input
+type="tel"
+id="phone"
+placeholder="(555) 000-0000"
+oninput="clearError()"
+/>
+
+
+<p
+id="contactError"
+style="color:var(--cinnamon);font-size:.8rem;margin-top:.3rem;display:none">
+Please provide an email or phone number.
+</p>
+
+</div>
+
+
+<div class="modal-btns">
+
+<button
+class="cancel-btn"
+onclick="closeCheckout()">
+Cancel
+</button>
+
+
+<button
+class="place-btn"
+onclick="placeOrder()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+
+<div class="success-msg" id="successMsg">
+
+<div class="check">🎉</div>
+
+<h2>Order Placed!</h2>
+
+<p>
+Thank you! We'll be in touch shortly to confirm your order.
+</p>
+
+<br/>
+
+
+<button
+class="place-btn"
+onclick="closeCheckout();resetCart();">
+Back to Shop
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+
 <footer>
-  © 2026 The Sourdough Swirl · Made with love & cinnamon
+© 2026 The Sourdough Swirl · Made with love & cinnamon
 </footer>
+
 
 <script>
 
 try {
-  emailjs.init("r6XgEloOaq5Awfse9");
+emailjs.init("r6XgEloOaq5Awfse9");
 } catch(e) {}
 
 
@@ -605,26 +657,26 @@ try {
    PRODUCTS
 ========================= */
 
-var products = [
+var products=[
 
-  {
-    id:1,
-    name:"Classic Cinnamon Rolls",
-    desc:"A box of 6 classic cinnamon rolls with brown sugar filling and cream cheese frosting.",
-    price:20.00
-  },
+{
+id:1,
+name:"Classic Cinnamon Rolls",
+desc:"A box of 6 classic cinnamon rolls with brown sugar filling and cream cheese frosting.",
+price:20.00
+},
 
-  {
-    id:2,
-    name:"Summer Berry Rolls",
-    desc:"A box of 6 sweet sourdough rolls filled with delicious summer berries and finished with a berry-inspired topping.",
-    price:25.00
-  }
+{
+id:2,
+name:"Summer Berry Rolls",
+desc:"A box of 6 sweet sourdough rolls filled with fresh summer berries and finished with a delicious berry topping.",
+price:25.00
+}
 
 ];
 
 
-var cart = [];
+var cart=[];
 
 
 /* =========================
@@ -633,39 +685,40 @@ var cart = [];
 
 function renderProducts(){
 
-  var g = document.getElementById('productGrid');
+var g=document.getElementById('productGrid');
 
-  var html = '';
+var html='';
 
-  for(var i=0;i<products.length;i++){
+for(var i=0;i<products.length;i++){
 
-    var p = products[i];
+var p=products[i];
 
-    html += '<div class="card">';
+html+='<div class="card">';
 
-    html += '<div class="card-img"></div>';
+html+='<div class="card-img"></div>';
 
-    html += '<div class="card-body">';
+html+='<div class="card-body">';
 
-    html += '<h3>'+p.name+'</h3>';
+html+='<h3>'+p.name+'</h3>';
 
-    html += '<p>'+p.desc+'</p>';
+html+='<p>'+p.desc+'</p>';
 
-    html += '<div class="card-footer">';
+html+='<div class="card-footer">';
 
-    html += '<span class="price">$'+p.price.toFixed(2)+'</span>';
+html+='<span class="price">$'+p.price.toFixed(2)+'</span>';
 
-    html += '<button class="add-btn" onclick="addToCart('+p.id+')">+ Add</button>';
+html+='<button class="add-btn" onclick="addToCart('+p.id+')">+ Add</button>';
 
-    html += '</div>';
+html+='</div>';
 
-    html += '</div>';
+html+='</div>';
 
-    html += '</div>';
+html+='</div>';
 
-  }
+}
 
-  g.innerHTML = html;
+g.innerHTML=html;
+
 }
 
 
@@ -675,46 +728,53 @@ function renderProducts(){
 
 function addToCart(id){
 
-  var p = null;
+var p=null;
 
-  for(var i=0;i<products.length;i++){
+for(var i=0;i<products.length;i++){
 
-    if(products[i].id === id){
+if(products[i].id===id){
 
-      p = products[i];
+p=products[i];
 
-      break;
-    }
-  }
+break;
 
-  var existing = null;
+}
 
-  for(var i=0;i<cart.length;i++){
+}
 
-    if(cart[i].id === id){
 
-      existing = cart[i];
+var existing=null;
 
-      break;
-    }
-  }
+for(var i=0;i<cart.length;i++){
 
-  if(existing){
+if(cart[i].id===id){
 
-    existing.qty++;
+existing=cart[i];
 
-  }else{
+break;
 
-    cart.push({
-      id:p.id,
-      name:p.name,
-      price:p.price,
-      qty:1
-    });
+}
 
-  }
+}
 
-  updateCart();
+
+if(existing){
+
+existing.qty++;
+
+}else{
+
+cart.push({
+id:p.id,
+name:p.name,
+price:p.price,
+qty:1
+});
+
+}
+
+updateCart();
+
 }
 
 
@@ -724,77 +784,80 @@ function addToCart(id){
 
 function updateCart(){
 
-  var count = 0;
+var count=0;
 
-  for(var i=0;i<cart.length;i++){
+for(var i=0;i<cart.length;i++){
 
-    count += cart[i].qty;
-  }
+count+=cart[i].qty;
 
-  document.getElementById('cartCount').textContent = count;
+}
 
-
-  var total = 0;
-
-  for(var i=0;i<cart.length;i++){
-
-    total += cart[i].price * cart[i].qty;
-  }
-
-  document.getElementById('cartTotal').textContent =
-    '$'+total.toFixed(2);
+document.getElementById('cartCount').textContent=count;
 
 
-  var container = document.getElementById('cartItems');
+var total=0;
+
+for(var i=0;i<cart.length;i++){
+
+total+=cart[i].price*cart[i].qty;
+
+}
+
+document.getElementById('cartTotal').textContent=
+'$'+total.toFixed(2);
 
 
-  if(!cart.length){
-
-    container.innerHTML =
-      '<p class="empty-cart">Your cart is empty.</p>';
-
-    return;
-  }
+var container=document.getElementById('cartItems');
 
 
-  var html = '';
+if(!cart.length){
+
+container.innerHTML=
+'<p class="empty-cart">Your cart is empty.</p>';
+
+return;
+
+}
 
 
-  for(var i=0;i<cart.length;i++){
-
-    var item = cart[i];
-
-    html += '<div class="cart-item">';
-
-    html += '<div class="cart-item-info">';
-
-    html += '<h4>'+item.name+'</h4>';
-
-    html += '<p>$'+
-      (item.price*item.qty).toFixed(2)+
-      '</p>';
-
-    html += '<div class="qty-ctrl">';
-
-    html +=
-      '<button class="qty-btn" onclick="changeQty('+
-      item.id+',-1)">−</button>';
-
-    html += '<span>'+item.qty+'</span>';
-
-    html +=
-      '<button class="qty-btn" onclick="changeQty('+
-      item.id+',1)">+</button>';
-
-    html += '</div>';
-
-    html += '</div>';
-
-    html += '</div>';
-  }
+var html='';
 
 
-  container.innerHTML = html;
+for(var i=0;i<cart.length;i++){
+
+var item=cart[i];
+
+html+='<div class="cart-item">';
+
+html+='<div class="cart-item-info">';
+
+html+='<h4>'+item.name+'</h4>';
+
+html+='<p>$'+
+(item.price*item.qty).toFixed(2)+
+'</p>';
+
+html+='<div class="qty-ctrl">';
+
+html+='<button class="qty-btn" onclick="changeQty('+
+item.id+',-1)">−</button>';
+
+html+='<span>'+item.qty+'</span>';
+
+html+='<button class="qty-btn" onclick="changeQty('+
+item.id+',1)">+</button>';
+
+html+='</div>';
+
+html+='</div>';
+
+html+='</div>';
+
+}
+
+
+container.innerHTML=html;
+
 }
 
 
@@ -804,22 +867,26 @@ function updateCart(){
 
 function changeQty(id,delta){
 
-  for(var i=0;i<cart.length;i++){
+for(var i=0;i<cart.length;i++){
 
-    if(cart[i].id === id){
+if(cart[i].id===id){
 
-      cart[i].qty += delta;
+cart[i].qty+=delta;
 
-      if(cart[i].qty <= 0){
+if(cart[i].qty<=0){
 
-        cart.splice(i,1);
-      }
+cart.splice(i,1);
 
-      break;
-    }
-  }
+}
 
-  updateCart();
+break;
+
+}
+
+}
+
+updateCart();
+
 }
 
 
@@ -829,13 +896,14 @@ function changeQty(id,delta){
 
 function toggleCart(){
 
-  document
-    .getElementById('sidebar')
-    .classList.toggle('open');
+document
+.getElementById('sidebar')
+.classList.toggle('open');
 
-  document
-    .getElementById('overlay')
-    .classList.toggle('open');
+document
+.getElementById('overlay')
+.classList.toggle('open');
+
 }
 
 
@@ -845,70 +913,73 @@ function toggleCart(){
 
 function openCheckout(){
 
-  if(!cart.length){
+if(!cart.length){
 
-    alert('Your cart is empty!');
+alert('Your cart is empty!');
 
-    return;
-  }
+return;
 
-
-  var total = 0;
-
-  for(var i=0;i<cart.length;i++){
-
-    total += cart[i].price * cart[i].qty;
-  }
+}
 
 
-  var summaryHtml =
-    '<h3>Order Summary</h3>';
+var total=0;
+
+for(var i=0;i<cart.length;i++){
+
+total+=cart[i].price*cart[i].qty;
+
+}
 
 
-  for(var i=0;i<cart.length;i++){
-
-    summaryHtml +=
-      '<div class="summary-line">'+
-      '<span>'+
-      cart[i].name+
-      ' × '+
-      cart[i].qty+
-      '</span>'+
-      '<span>$'+
-      (cart[i].price*cart[i].qty).toFixed(2)+
-      '</span>'+
-      '</div>';
-  }
+var summaryHtml='<h3>Order Summary</h3>';
 
 
-  summaryHtml +=
-    '<div class="summary-total">'+
-    '<span>Total</span>'+
-    '<span>$'+total.toFixed(2)+'</span>'+
-    '</div>';
+for(var i=0;i<cart.length;i++){
+
+summaryHtml+=
+'<div class="summary-line">'+
+'<span>'+
+cart[i].name+
+' × '+
+cart[i].qty+
+'</span>'+
+'<span>$'+
+(cart[i].price*cart[i].qty).toFixed(2)+
+'</span>'+
+'</div>';
+
+}
 
 
-  document.getElementById('orderSummary').innerHTML =
-    summaryHtml;
-
-  document.getElementById('checkoutForm').style.display =
-    'block';
-
-  document.getElementById('successMsg').style.display =
-    'none';
+summaryHtml+=
+'<div class="summary-total">'+
+'<span>Total</span>'+
+'<span>$'+total.toFixed(2)+'</span>'+
+'</div>';
 
 
-  document
-    .getElementById('modalOverlay')
-    .classList.add('open');
+document.getElementById('orderSummary').innerHTML=
+summaryHtml;
 
-  document
-    .getElementById('sidebar')
-    .classList.remove('open');
+document.getElementById('checkoutForm').style.display=
+'block';
 
-  document
-    .getElementById('overlay')
-    .classList.remove('open');
+document.getElementById('successMsg').style.display=
+'none';
+
+
+document
+.getElementById('modalOverlay')
+.classList.add('open');
+
+document
+.getElementById('sidebar')
+.classList.remove('open');
+
+document
+.getElementById('overlay')
+.classList.remove('open');
+
 }
 
 
@@ -918,9 +989,10 @@ function openCheckout(){
 
 function closeCheckout(){
 
-  document
-    .getElementById('modalOverlay')
-    .classList.remove('open');
+document
+.getElementById('modalOverlay')
+.classList.remove('open');
+
 }
 
 
@@ -930,8 +1002,9 @@ function closeCheckout(){
 
 function clearError(){
 
-  document.getElementById('contactError').style.display =
-    'none';
+document.getElementById('contactError').style.display=
+'none';
+
 }
 
 
@@ -941,105 +1014,108 @@ function clearError(){
 
 function placeOrder(){
 
-  var fname =
-    document.getElementById('fname').value.trim();
+var fname=
+document.getElementById('fname').value.trim();
 
-  var lname =
-    document.getElementById('lname').value.trim();
+var lname=
+document.getElementById('lname').value.trim();
 
-  var email =
-    document.getElementById('email').value.trim();
+var email=
+document.getElementById('email').value.trim();
 
-  var phone =
-    document.getElementById('phone').value.trim();
-
-
-  if(!fname || !lname){
-
-    alert('Please fill in your name.');
-
-    return;
-  }
+var phone=
+document.getElementById('phone').value.trim();
 
 
-  if(!email && !phone){
+if(!fname||!lname){
 
-    document.getElementById('contactError').style.display =
-      'block';
+alert('Please fill in your name.');
 
-    return;
-  }
+return;
 
-
-  var orderList = '';
-
-  var total = 0;
+}
 
 
-  for(var i=0;i<cart.length;i++){
+if(!email&&!phone){
 
-    orderList +=
-      cart[i].name+
-      ' x'+
-      cart[i].qty+
-      ' — $'+
-      (cart[i].price*cart[i].qty).toFixed(2)+
-      '\n';
+document.getElementById('contactError').style.display=
+'block';
 
-    total +=
-      cart[i].price*
-      cart[i].qty;
-  }
+return;
+
+}
 
 
-  var params = {
+var orderList='';
 
-    name:fname+' '+lname,
-
-    from_name:fname+' '+lname,
-
-    email:email,
-
-    from_email:email,
-
-    phone:phone,
-
-    order:orderList,
-
-    message:orderList,
-
-    total:'$'+total.toFixed(2),
-
-    time:new Date().toLocaleString()
-
-  };
+var total=0;
 
 
-  emailjs.send(
-    "service_hlskoah",
-    "template_kr33y0v",
-    params
-  )
+for(var i=0;i<cart.length;i++){
 
-  .then(function(){
+orderList+=
+cart[i].name+
+' x'+
+cart[i].qty+
+' — $'+
+(cart[i].price*cart[i].qty).toFixed(2)+
+'\n';
 
-    document.getElementById('checkoutForm').style.display =
-      'none';
+total+=
+cart[i].price*
+cart[i].qty;
 
-    document.getElementById('successMsg').style.display =
-      'block';
+}
 
-  })
 
-  .catch(function(err){
+var params={
 
-    console.error(err);
+name:fname+' '+lname,
 
-    alert(
-      'Something went wrong sending your order. Please try again.'
-    );
+from_name:fname+' '+lname,
 
-  });
+email:email,
+
+from_email:email,
+
+phone:phone,
+
+order:orderList,
+
+message:orderList,
+
+total:'$'+total.toFixed(2),
+
+time:new Date().toLocaleString()
+
+};
+
+
+emailjs.send(
+"service_hlskoah",
+"template_kr33y0v",
+params
+)
+
+.then(function(){
+
+document.getElementById('checkoutForm').style.display=
+'none';
+
+document.getElementById('successMsg').style.display=
+'block';
+
+})
+
+.catch(function(err){
+
+console.error(err);
+
+alert(
+'Something went wrong sending your order. Please try again.'
+);
+
+});
 
 }
 
@@ -1050,21 +1126,23 @@ function placeOrder(){
 
 function resetCart(){
 
-  cart = [];
+cart=[];
 
-  updateCart();
-
-
-  var inputs =
-    document
-      .getElementById('checkoutForm')
-      .querySelectorAll('input');
+updateCart();
 
 
-  for(var i=0;i<inputs.length;i++){
+var inputs=
+document
+.getElementById('checkoutForm')
+.querySelectorAll('input');
 
-    inputs[i].value = '';
-  }
+
+for(var i=0;i<inputs.length;i++){
+
+inputs[i].value='';
+
+}
+
 }
 
 
